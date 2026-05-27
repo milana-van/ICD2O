@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mob Guessing Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <div class="home-container">
+            <div class="title-section">
+                <h1 class="game-title">🎮 Mob Guessing Challenge 🎮</h1>
+                <p class="subtitle">Think you know your Minecraft mobs?</p>
+            </div>
+            <button class="btn btn-start" id="startBtn">START GAME</button>
+            <div class="info-box">
+                <p>📋 How to Play:</p>
+                <p>• You have 60 seconds to guess the mob</p>
+                <p>• You get 3 chances to answer correctly</p>
+                <p>• Use the hints wisely!</p>
+                <p>• Good luck! ⛏️</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Page -->
+    <div id="gamePage" class="page">
+        <div class="game-container">
+            <div class="header">
+                <div class="timer-section">
+                    <div class="timer-display" id="timerDisplay">60s</div>
+                </div>
+                <div class="attempts-section">
+                    <span class="attempts-label">Attempts Left:</span>
+                    <div class="attempts-display" id="attemptsDisplay">
+                        <span class="attempt">❤️</span>
+                        <span class="attempt">❤️</span>
+                        <span class="attempt">❤️</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hints-section">
+                <h2>Hints</h2>
+                <div class="hints-list" id="hintsList"></div>
+            </div>
+
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="guessInput" 
+                    placeholder="Enter mob name and press Enter..." 
+                    class="guess-input"
+                    autocomplete="off"
+                >
+                <button class="btn btn-submit" id="submitBtn">Submit</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="previous-guesses">
+                <h3>Your Guesses:</h3>
+                <ul id="guessesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Page -->
+    <div id="resultPage" class="page">
+        <div class="result-container">
+            <div class="result-content">
+                <div class="mob-image-container">
+                    <img id="mobImage" src="" alt="Mob" class="mob-image">
+                </div>
+                <div class="result-text" id="resultText"></div>
+                <div class="result-animation" id="resultAnimation"></div>
+            </div>
+            <div class="result-buttons">
+                <button class="btn btn-next" id="nextBtn">NEXT CHALLENGE</button>
+                <button class="btn btn-menu" id="menuBtn">MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration particles -->
+    <div id="particleContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
